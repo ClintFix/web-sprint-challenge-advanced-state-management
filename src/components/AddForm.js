@@ -5,12 +5,14 @@ import { connect } from 'react-redux'
 import { addSmurf, setError } from '../actions'
 
 const AddForm = (props) => {
-    const [state, setState] = useState({
+    const initialState = {
         name:"",
         position:"",
         nickname:"",
         description:""
-    });
+    }
+
+    const [state, setState] = useState(initialState);
 
     const handleChange = e => {
         setState({
@@ -25,6 +27,8 @@ const AddForm = (props) => {
             props.setError("Name, position and nickname fields are required.");
         } else {
             props.addSmurf(state)
+            setState(initialState)
+            props.setError('')
         }
     }
 
