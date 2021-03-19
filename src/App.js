@@ -13,7 +13,7 @@ class App extends Component {
 
   // Fetch smurf data on load
   componentDidMount() {
-    fetchSmurfs()
+    this.props.fetchSmurfs()
   }
 
   render() {
