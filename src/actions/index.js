@@ -11,7 +11,6 @@ export const fetchSmurfs = () => {
         axios
             .get('http://localhost:3333/smurfs')
             .then((res) => {
-                console.log(res) //TODO: remove before submit
                 dispatch({
                     type: FETCH_SMURFS_SUCCESS,
                     payload: res.data
