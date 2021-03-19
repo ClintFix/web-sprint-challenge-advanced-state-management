@@ -33,10 +33,10 @@ export const addSmurf = (smurf) => {
 }
 
 // ERROR MESSAGE ACTION //
-export const ERROR_MESSAGE = 'ERROR_MESSAGE';
-export const errorMessage = (error) => {
+export const SET_ERROR = 'SET_ERROR';
+export const setError = (error) => {
     return {
-        type: ERROR_MESSAGE,
+        type: SET_ERROR,
         payload: error,
     }
 }
